@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>luuman</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="luuman,世平阜康">
+    <meta name="description" content="luuman,90后，水瓶座普通男青年！爱折腾，爱运动，更爱游离于错综复杂的编码与逻辑中，无法自拔。相信编程是一门艺术，自诩为游弋在代码里的人生。">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="luuman">
+    <meta name="version" content="6.0.3">
+    <link rel="apple-touch-icon-precomposed" href="img/luuman.png">
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.png">
+
+    <link rel="stylesheet" href="css/global.css"/>
+    <!-- <link rel="stylesheet" href="css/index.css"/> -->
+    <style type="text/css">
+    #v4-pre-loaded {
+        background-color: #212220;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        z-index: 19900207;
+        text-align: center;
+        -webkit-transition: all .36s linear;
+        transition: all .36s linear
+    }
+
+    #v4-pre-loaded:before,#v4-pre-loaded .loading {
+        display: inline-block;
+        vertical-align: middle
+    }
+
+    #v4-pre-loaded:before {
+        content: '';
+        height: 100%
+    }
+
+    #v4-pre-loaded .loading {
+        width: 146px;
+        height: 146px;
+        background: url(img/smohan_logo_mask.png) 50% no-repeat;
+        background-size: cover;
+        -webkit-transition: all .36s linear;
+        transition: all .36s linear;
+        -webkit-animation: loadingInit 1.3s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+                  animation: loadingInit 1.3s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite; 
+        /*margin-top: -148px*/
+    }
+
+    #v4-pre-loaded .loading:after {
+        width: 100%;
+        line-height: 36px;
+        content: 'The page is loading...';
+        position: absolute;
+        left: 0;
+        bottom: -36px;
+        font-size: 14px;
+        text-align: center;
+        color: #787977;
+        opacity: 0;
+        -webkit-transition: opacity .36s linear;
+        transition: opacity .36s linear;
+        -webkit-animation: fadeIn .8s linear 1s 1 forwards;
+        animation: fadeIn .8s linear 1s 1 forwards
+    }
+
+    @-webkit-keyframes loadingInit {
+        from, to {
+        -webkit-transform: translateY(-15vh) scaleY(1.02);
+                transform: translateY(-15vh) scaleY(1.02);
+        }
+        80% {
+        -webkit-transform: translateY(-30vh) scaleY(.98);
+                transform: translateY(-30vh) scaleY(.98);
+        }
+    }
+
+    @keyframes loadingInit {
+        from, to {
+        -webkit-transform: translateY(-15vh) scaleY(1.02);
+                transform: translateY(-15vh) scaleY(1.02);
+        }
+        80% {
+        -webkit-transform: translateY(-30vh) scaleY(.98);
+                transform: translateY(-30vh) scaleY(.98);
+        }
+    }
+
+    #v4-pre-loaded.hide {
+        opacity: 0;
+        visibility: hidden
+    }
+
+    </style>
+    <!-- <link rel="stylesheet" href="css/style.css"/> -->
+
+    <!-- 低版本跳转 -->
+    <!--[if lt IE 10]>
+    <script>window.location.href="http://luuman.github.io/Works/PC/IE/";</script>
+    <![endif]-->
+</head>
+<body>
+     
+<div id="v4-pre-loaded">
+    <div class="loading"></div>
+</div>
+</body>
+</html>

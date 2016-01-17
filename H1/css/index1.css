@@ -44,84 +44,121 @@ h1 {
 }
 
 #v4-pre-loaded {
-    background-color: #212220;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    z-index: 19900207;
-    text-align: center;
-    -webkit-transition: all .36s linear;
-    transition: all .36s linear
+	background-color: #212220;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	z-index: 19900207;
+	text-align: center;
+	-webkit-transition: all .36s linear;
+	transition: all .36s linear
 }
 
 #v4-pre-loaded:before,#v4-pre-loaded .loading {
-    display: inline-block;
-    vertical-align: middle
+	display: inline-block;
+	vertical-align: middle
 }
 
 #v4-pre-loaded:before {
-    content: '';
-    height: 100%
+	content: '';
+	height: 100%
 }
 
 #v4-pre-loaded .loading {
-    width: 146px;
-    height: 146px;
-    background: url(../img/smohan_logo_mask.png) 50% no-repeat;
-    background-size: cover;
-    -webkit-transition: all .36s linear;
-    transition: all .36s linear;
-    -webkit-animation: loadingInit 1.3s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
-              animation: loadingInit 1.3s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite; 
-    /*margin-top: -148px*/
+	width: 146px;
+	height: 146px;
+	background: url(../img/smohan_logo_mask.png) 50% no-repeat;
+	background-size: cover;
+	-webkit-transition: all .36s linear;
+	transition: all .36s linear;
+	-webkit-animation: loadingInit .6s linear 1 forwards,changeBackground 2.4s linear 1s infinite;
+	animation: loadingInit .6s linear 1 forwards,changeBackground 2.4s linear 1s infinite;
+	/*margin-top: -148px*/
 }
 
 #v4-pre-loaded .loading:after {
-    width: 100%;
-    line-height: 36px;
-    content: 'The page is loading...';
-    position: absolute;
-    left: 0;
-    bottom: -36px;
-    font-size: 14px;
-    text-align: center;
-    color: #787977;
-    opacity: 0;
-    -webkit-transition: opacity .36s linear;
-    transition: opacity .36s linear;
-    -webkit-animation: fadeIn .8s linear 1s 1 forwards;
-    animation: fadeIn .8s linear 1s 1 forwards
+	width: 100%;
+	line-height: 36px;
+	content: 'The page is loading...';
+	position: absolute;
+	left: 0;
+	bottom: -36px;
+	font-size: 14px;
+	text-align: center;
+	color: #787977;
+	opacity: 0;
+	-webkit-transition: opacity .36s linear;
+	transition: opacity .36s linear;
+	-webkit-animation: fadeIn .8s linear 1s 1 forwards;
+	animation: fadeIn .8s linear 1s 1 forwards
 }
 
 @-webkit-keyframes loadingInit {
-    from, to {
-    -webkit-transform: translateY(-15vh) scaleY(1.02);
-            transform: translateY(-15vh) scaleY(1.02);
-    }
-    80% {
-    -webkit-transform: translateY(-30vh) scaleY(.98);
-            transform: translateY(-30vh) scaleY(.98);
-    }
+	0% {
+		-webkit-transform: rotate(0deg) scale(0);
+		opacity: 0
+	}
+
+	100% {
+		-webkit-transform: rotate(1080deg) scale(1);
+		opacity: 1
+	}
 }
 
 @keyframes loadingInit {
-    from, to {
-    -webkit-transform: translateY(-15vh) scaleY(1.02);
-            transform: translateY(-15vh) scaleY(1.02);
-    }
-    80% {
-    -webkit-transform: translateY(-30vh) scaleY(.98);
-            transform: translateY(-30vh) scaleY(.98);
-    }
+	0% {
+		transform: rotate(0deg) scale(0);
+		opacity: 0
+	}
+
+	100% {
+		transform: rotate(1080deg) scale(1);
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes changeBackground {
+	0% {
+		background: url(../img/smohan_logo_mask.png) 50% no-repeat;
+		background-size: cover
+	}
+
+	50% {
+		background: url(../img/logo_flat.png) 50% no-repeat;
+		background-size: cover
+	}
+
+	100% {
+		background: url(../img/smohan_logo_mask.png) 50% no-repeat;
+		background-size: cover
+	}
+}
+
+@keyframes changeBackground {
+	0% {
+		background: url(../img/smohan_logo_mask.png) 50% no-repeat;
+		background-size: cover
+	}
+
+	40% {
+		background: url(../img/logo_flat.png) 50% no-repeat;
+		background-size: cover
+	}
+
+	100% {
+		background: url(../img/smohan_logo_mask.png) 50% no-repeat;
+		background-size: cover
+	}
 }
 
 #v4-pre-loaded.hide {
-    opacity: 0;
-    visibility: hidden
+	opacity: 0;
+	visibility: hidden
 }
+
 .page-dots {
 	position: fixed;
 	width: 14px;
@@ -2110,7 +2147,7 @@ h1 {
 		-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
 	}
 
-	80% {
+	100% {
 		-webkit-transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg)
 	}
 }
@@ -2120,7 +2157,7 @@ h1 {
 		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
 	}
 
-	80% {
+	100% {
 		transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg)
 	}
 }
