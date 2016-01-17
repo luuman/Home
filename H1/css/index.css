@@ -298,7 +298,7 @@ h1 {
 	height: 336px;
 	top: 33px;
 	left: 96px;
-    background-color: rgba(10, 10, 10, 0.63);
+    background-color: hsla(90, 3%, 13%, 0.45);
 }
 
 .page1 .inner .logo {
