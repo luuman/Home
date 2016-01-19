@@ -18,7 +18,7 @@ html,body {
 
 #smohan-v4-container section {
 	height: 100%;
-	background-color: #212220;
+	background-color: #000;
 	overflow: hidden
 }
 
@@ -44,7 +44,7 @@ h1 {
 }
 
 #v4-pre-loaded {
-    background-color: #212220;
+    background-color: #000;
     position: fixed;
     top: 0;
     left: 0;
@@ -249,7 +249,7 @@ h1 {
 .page1 .m-driver {
 	width: 740px;
 	height: 435px;
-	background: url(../img/device-main.jpg) 50% no-repeat;
+	background: url(../img/device-main.png) 50% no-repeat;
 	background-size: 100% auto;
 	margin: 40px auto 0 auto;
 	position: relative
@@ -257,6 +257,7 @@ h1 {
 
 .page1 .m-driver .inner {
 	position: absolute;
+	z-index: 5;
 	width: 547px;
 	height: 336px;
 	top: 33px;
@@ -323,7 +324,7 @@ h1 {
 	bottom: 50px;
 	left: 50%;
 	margin-left: -25px;
-	z-index: 0;
+	z-index: 10;
 	background-color: #111210;
 	-webkit-transition: all .5s ease-out;
 	transition: all .5s ease-out
@@ -1836,11 +1837,14 @@ h1 {
 	right: 50px
 }
 
-.page-init .inner {
+.page-init>.inner {
 	position: absolute;
 	/* float: left; */
 	top: 50%;
+	left: 50%;
 	/* top: -80px; */
+	transform:translate(-50%,-50%);
+	z-index: 5;
 }
 .tans{
 	transform:translate(0,-50%);
@@ -1856,7 +1860,7 @@ h1 {
 }
 
 .page-init .inner {
-	width: 100%
+	/*width: 100%*/
 }
 
 .page3 .m-works-wrap {
@@ -2228,7 +2232,7 @@ h1 {
 #smohan-title-tip {
 	text-align: center;
 	color: #fff;
-	background: rgba(0,0,0,.8);
+	background: #258fb8;
 	position: absolute;
 	z-index: 100;
 	padding: 5px 15px;
@@ -2242,7 +2246,7 @@ h1 {
 	height: 0;
 	border-left: 8px solid transparent;
 	border-right: 8px solid transparent;
-	border-top: 8px solid rgba(0,0,0,.8);
+	border-top: 8px solid #258fb8;
 	content: '';
 	position: absolute;
 	left: 50%;
@@ -2252,7 +2256,7 @@ h1 {
 
 #smohan-title-tip.top:after {
 	border-top-color: transparent;
-	border-bottom: 8px solid rgba(0,0,0,.8);
+	border-bottom: 8px solid #258fb8;
 	top: -16px;
 	bottom: auto
 }
