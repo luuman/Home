@@ -186,7 +186,7 @@ h1 {
 }
 
 .dot.current:before,.dot.current:after {
-	border-color: rgba(255,255,255,.6);
+	border-color: #258fb8;
 	-webkit-animation: blink 3s linear infinite;
 	animation: blink 3s linear infinite
 }
